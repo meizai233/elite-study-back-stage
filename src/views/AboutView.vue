@@ -7,10 +7,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="about">
     关于页面
     <div>我来自{{ msg }}</div>
   </div>
 </template>
 
-<style></style>
+<style>
+.about {
+  font-size: 16px;
+}
+</style>
