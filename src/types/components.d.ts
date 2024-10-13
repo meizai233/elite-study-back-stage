@@ -9,8 +9,12 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AButton: typeof import('ant-design-vue/es')['Button']
+    LockOutlined: typeof import('@ant-design/icons-vue')['LockOutlined']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Test: typeof import('./../components/Test.vue')['default']
+    UpSquareOutlined: typeof import('@ant-design/icons-vue')['UpSquareOutlined']
+    UserOutlined: typeof import('@ant-design/icons-vue')['UserOutlined']
   }
 }
