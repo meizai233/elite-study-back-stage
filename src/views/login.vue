@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const formState = $ref({
-  phone: '',
-  password: '',
+// 不知道为什么要dollar
+const formState = ref({
+  phone: "",
+  password: "",
 });
-
 </script>
 
 <template>
@@ -43,7 +43,7 @@ const formState = $ref({
 }
 
 .title::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 110%;
   top: calc(2.5rem - 10px);
@@ -53,7 +53,7 @@ const formState = $ref({
 }
 
 .title::before {
-  content: '';
+  content: "";
   position: absolute;
   right: 110%;
   top: calc(2.5rem - 10px);
