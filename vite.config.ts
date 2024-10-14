@@ -13,7 +13,7 @@ export default defineConfig({
     Unocss(),
     AutoImport({
       dts: "src/types/auto-imports.d.ts", // 生成类型声明文件，自动引入相关插件
-      imports: ["vue", "pinia"], // 自动引入哪些内容
+      imports: ["vue", "pinia", "@vueuse/core"], // 自动引入哪些内容
       dirs: ["src/composables"], // 自动导入composables目录下的模块
     }),
     Components({
