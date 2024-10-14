@@ -6,8 +6,7 @@ const request = axios.create({ baseURL: `${BASE_URL}/api/admin/v1` });
 // 请求拦截器
 // 请求拦截器
 request.interceptors.request.use((config) => {
-  debugger;
-  // $ 是啥 配置Reactivity transform后 不需要在显式转为ref 一个语法糖
+  // $ 配置Reactivity transform后 不需要在显式转为ref 一个vue3语法糖
   const { token } = $(useAuth());
   if (token) {
     config.headers.Authorization = token;

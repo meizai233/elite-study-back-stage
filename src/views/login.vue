@@ -1,9 +1,13 @@
 <script lang="ts" setup>
-// 不知道为什么要dollar
-const formState = ref({
+const formState = $ref({
   phone: "",
   password: "",
 });
+
+const { login } = useAuth();
+async function handleLogin() {
+  await login(formState.phone, formState.password);
+}
 </script>
 
 <template>
@@ -21,7 +25,7 @@ const formState = ref({
         <LockOutlined absolute text="5 #c0c0c0!" bottom="2.5" left="2.6" />
         <input class="input" type="password" placeholder="请输入密码" v-model="formState.password" />
       </div>
-      <button bg="#2580ec" text="7 white" w-full mt-10 hover:bg="blue" transition-all>登录</button>
+      <button bg="#2580ec" text="7 white" w-full mt-10 hover:bg="blue" transition-all @click="handleLogin">登录</button>
     </div>
   </div>
 </template>

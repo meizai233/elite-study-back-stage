@@ -15,6 +15,7 @@ export function useAuth() {
       token.value = data;
       // 获取用户信息
       const { data: details, code: c_code } = await checkAdminRole();
+      debugger;
       if (c_code === 0) {
         if (details.role === "ADMIN") {
           message.success("登录成功");
